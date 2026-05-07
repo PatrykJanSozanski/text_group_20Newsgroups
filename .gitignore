@@ -1,8 +1,13 @@
 .venv/
 __pycache__/
 .ipynb_checkpoints/
-artifacts_quick/
-artifacts_full/
+artifacts_quick/*
+artifacts_full/*
+!artifacts_quick/plots/
+!artifacts_quick/plots/*_interactive.html
+!artifacts_full/plots/
+!artifacts_full/plots/*_interactive.html
 mlruns/
 .vscode/
 zum_pipeline_report_copy.ipynb
+.DS_Store
