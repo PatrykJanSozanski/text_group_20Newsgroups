@@ -7,7 +7,6 @@ artifacts_full/*
 !artifacts_quick/plots/*_interactive.html
 !artifacts_full/plots/
 !artifacts_full/plots/*_interactive.html
-test_zum_pipeline_report.ipynb
 mlruns/
 .vscode/
 zum_pipeline_report_copy.ipynb
