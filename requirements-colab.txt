@@ -11,6 +11,8 @@ sentence-transformers>=3.4
 gensim>=4.3
 tqdm>=4.67
 wordcloud>=1.9
+# Keep numba compatible with Colab's preinstalled RAPIDS packages.
+numba>=0.60,<0.62
 umap-learn>=0.5.12
 plotly>=6.7.0
 nbformat>=4.2.0
