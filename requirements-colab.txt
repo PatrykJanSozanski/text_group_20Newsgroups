@@ -1,18 +1,27 @@
-# Colab already manages its own Jupyter kernel packages. Installing ipykernel
-# from the local requirements can upgrade Colab's runtime dependencies.
-matplotlib>=3.9
-mlflow>=2.18
-nltk>=3.9
-numpy>=2.1
-pandas>=2.2
-seaborn>=0.13
-scikit-learn>=1.6
-sentence-transformers>=3.4
-gensim>=4.3
-tqdm>=4.67
-wordcloud>=1.9
-# Keep numba compatible with Colab's preinstalled RAPIDS packages.
+# Colab/Python 3.12 requirements.
+# Do not install ipykernel/notebook here: Colab manages its own kernel stack.
+#
+# NumPy is pinned to Colab's stable ABI baseline. Upgrading NumPy in-place can
+# leave mixed NumPy binaries loaded in the runtime, which caused errors like:
+# ImportError: cannot import name '_center' from 'numpy._core.umath'
+numpy==2.0.2
+scipy>=1.14,<1.16
+pandas>=2.2,<2.4
+scikit-learn>=1.6,<1.8
+matplotlib>=3.9,<3.11
+seaborn>=0.13,<0.14
+
+mlflow>=2.18,<4
+nltk>=3.9,<4
+sentence-transformers>=3.4,<6
+transformers>=4.45,<5
+gensim>=4.3.3,<4.4
+tqdm>=4.67,<5
+wordcloud>=1.9,<2
+
+# Keep numba compatible with Colab's preinstalled runtime packages.
 numba>=0.60,<0.62
-umap-learn>=0.5.12
-plotly>=6.7.0
+umap-learn>=0.5.7,<0.6
+plotly>=5.24,<7
 nbformat>=4.2.0
+nbconvert>=7,<8
