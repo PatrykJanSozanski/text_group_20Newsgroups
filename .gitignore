@@ -1,13 +1,15 @@
 .venv/
 __pycache__/
 .ipynb_checkpoints/
-artifacts_quick/*
-artifacts_full/*
-!artifacts_quick/plots/
-!artifacts_quick/plots/*_interactive.html
-!artifacts_full/plots/
-!artifacts_full/plots/*_interactive.html
-mlruns/
-.vscode/
-zum_pipeline_report_copy.ipynb
 .DS_Store
+.vscode/
+
+# Local transfer/archive files
+*.tar.gz
+zum_pipeline_report_copy.ipynb
+
+# Heavy or reproducible experiment state
+artifacts_full/cache/
+artifacts_full/mlruns/
+artifacts_quick/
+mlruns/
